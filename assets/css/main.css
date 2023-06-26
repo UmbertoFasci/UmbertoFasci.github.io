@@ -100,7 +100,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #888;
-		font-family: "Helvetica", sans-serif;
+		font-family: "Helvetica Neue", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
@@ -1849,7 +1849,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4acaa8;
+			border-color: #000;
 		}
 
 	select {
@@ -2721,11 +2721,11 @@ input, select, textarea {
 			}
 
 		#header header p {
-			color: #b7eadc;
+			color: #ffffff;
 		}
 
 		#header a {
-			color: #d2f2e9;
+			color: #ffffff;
 		}
 
 			#header a:hover {
@@ -2752,7 +2752,7 @@ input, select, textarea {
 			}
 
 			#header > header p {
-				color: #d2f2e9;
+				color: #ffffff;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
