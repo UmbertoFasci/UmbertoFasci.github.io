@@ -73,6 +73,14 @@ input, select, textarea {
 	appearance: none;
 }
 
+.full-width-capsule {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
 /* Basic */
 
 	html {
