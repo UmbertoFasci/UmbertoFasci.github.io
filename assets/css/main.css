@@ -1,6 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5?styles=103506,103508,103501');
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 /*
 	Read Only by HTML5 UP
@@ -365,7 +366,9 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #777;
-		font-weight: 700;
+		font-family: "Permanent Marker", serif;
+		font-weight: 400;
+		font-style: normal;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
 	}
