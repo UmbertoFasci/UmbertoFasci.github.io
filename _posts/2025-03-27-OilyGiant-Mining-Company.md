@@ -3,7 +3,7 @@ layout: post
 title:  Simulated Regional Profit Analysis & Recommendations - Oil and Mining Application
 description: Procedure outlining 
 date:   2025-03-27 15:01:35 +0300
-image:  '/images/110.jpg'
+image:  '/images/bigoil.jpg'
 tags:   [Predictive Modeling, Business]
 ---
 # Introduction
