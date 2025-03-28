@@ -59,7 +59,7 @@ The following section describes the data distributions of each of the regions.
 
 - `f0`: Bimodal distribution with two prominent peaks, fairly symmetric around 0
 - `f1`: Single normal/Gaussian distribution, unimodal and symmetric
--`f2`: Appears to be a discrete-looking distribution with regularly spaced spikes, though noted as continuous. This could indicate heavily quantized or binned data.
+- `f2`: Appears to be a discrete-looking distribution with regularly spaced spikes, though noted as continuous. This could indicate heavily quantized or binned data.
 
 ### Region 3 Feature Distributions:
 
