@@ -1,162 +1,20 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Umberto Fasci Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+---
+layout: default
+image: '/images/01.jpg'
+---
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/ujfasci.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Umberto Fasci</a></h1>
-					<p>Data Scientist - Specializing in Business Growth and Marketing</p>
-				</header>
-<!-- 				<nav id="nav">
-					<ul>
-						<li><a href="#About" class="active">About Me</a></li>
-						<li><a href="#Projects">Projects</a></li>
-					</ul>
-				</nav> -->
-				<footer>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/umbertofasci/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/UmbertoFasci" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					</ul>
-				</footer>
-			</section>
+{% include hero.html %}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+{% include featured-posts.html %}
 
-				<!-- Main -->
-					<div id="main">
+<div class="container">
+  <div class="row grid">
+    {% if site.posts.size > 0 %}
+      {% for post in paginator.posts %}
+        {% include article-content.html %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
 
-						<!-- One -->
-							<section id="#About">
-								<div class="container">
-									<header class="major">
-										<h2>About Me</h2>
-									</header>
-									<p>In my current role I lead data-driven marketing, advertising and SEO initiatives, automate workflows, and develop ETL processes to ensure data integrity across sales and order datasets. My approach combines a deep technical skill set with a passion for solving complex business challenges.</p>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="#Projects">
-								<div class="container">
-									<h3>Projects</h3>
-									<div class="projects-grid">
-										<div class="card">
-											<a class="card2" href="./Projects/OptimizingGoldRecovery.html">
-												<div class="content">
-													<p>Zyfra - Predicting Recovery Efficiency in Mining Operations</b>
-													<p>Target rich random forest regression, time-series fill experiments, and actionable results.</p>
-													<div class="go-corner" href="./Projects/OptimizingGoldRecovery.html">
-														<div class="go-arrow">
-															🜚
-														</div>
-
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="card">
-											<a class="card2" href="./Projects/BigOilPredictions.html">
-												<div class="content">
-													<p>Oily Giant Mining Company - Simulated Regional Profit Analysis & Recommendations</b>
-													<p>Modular model building workflow and bootstrapped profit calculations.</p>
-													<div class="go-corner" href="./Projects/BigOilPredictions.html">
-														<div class="go-arrow">
-															🛢
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="card">
-											<a class="card2" href="./Projects/Ice_Games_Analysis.html">
-												<div class="content">
-													<p>Ice Games - Global Sales Exploratory Data Analysis</b>
-													<p>Exploratory data analysis of global video game releases and sales.</p>
-													<div class="go-corner" href="./Projects/Ice_Games_Analysis.html">
-														<div class="go-arrow">
-															🖴
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="card">
-											<a class="card2" href="./Projects/PricePredict.html">
-												<div class="content">
-													<p>USAID Health Commodity Shipment Analysis</b>
-													<p>Prediction of shipping method and insurance values with Dense Neural Networks, and Multiple Linear Regression.</p>
-													<div class="go-corner" href="./Projects/PricePredict.html">
-														<div class="go-arrow">
-															🛧
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="card">
-											<a class="card2" href="./Projects/Parkinson_Pred.html">
-												<div class="content">
-													<p>Accelerating Medicines Partnership&reg; Parkinson's Disease Progression Prediction.</b>
-													<p>Prediction of Parkinson's disease progression with clinical and protein abundance data utilizing Dense Neural Networks, and Random Decision Forests.</p>
-													<div class="go-corner" href="./Projects/Parkinson_Pred.html">
-														<div class="go-arrow">
-															☤
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="card">
-											<a class="card2" href="./Projects/Dyson_Swarm.html">
-												<div class="content">
-													<p>Dyson Swarm Algorithm</b>
-													<p>A theoretical model for satellite-like movement and energy collection based on Particle Swarm Optimization and the Dyson Sphere megastructure model.</p>
-													<div class="go-corner" href="./Projects/Dyson_Swarm.html">
-														<div class="go-arrow">
-															🛰
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-							</section>
-					</div>
-
-					<!-- Footer -->
-					<section id="footer">
-  						<div class="container">
-    							<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=(2,2,30)&height=70&section=footer" class="full-width-capsule" />
-    							<ul class="copyright">
-      								<li>&copy; Umberto Fasci. Some rights reserved.</li>
-    							</ul>
-  						</div>
-					</section>
-
-
-
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+{% include pagination.html %}
