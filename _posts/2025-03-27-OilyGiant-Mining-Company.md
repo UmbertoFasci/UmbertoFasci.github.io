@@ -67,3 +67,65 @@ The following section describes the data distributions of each of the regions.
 - `f1`: Normal distribution, very symmetric and unimodal
 - `f2`: Normal distribution with slight heavy tails, symmetric and unimodal
 
+# Base Model
+
+For the purposes of this analysis, **Linear Regression** is the chosen algorithm to model the regional `product` target. Additionally, `RMSE` is utilized as the main metric to measure model performance. _Additional metrics are utilized in tendem to inform model performance._ Model parameters are collected and stored into the `model_params` dictionary in occordance to a custom output structure workflow. Working with stored data in this fashion allows for much more versatility in future functionalities such as a DataFrame showcasing the results of the model.
+
+```python
+def train_and_evaluate_region(data, region_name):
+    # Separate features and target
+    features = data[['f0', 'f1', 'f2']]
+    target = data['product']
+    
+    # Split data into training and validation sets (75:25)
+    features_train, features_val, target_train, target_val = train_test_split(features, target, test_size=0.25, random_state=12345)
+    
+    # Initialize and train model
+    model = LinearRegression()
+    model.fit(features_train, target_train)
+    
+    # Make predictions on validation set
+    target_pred = model.predict(features_val)
+    
+    # Calculate metrics
+    rmse = np.sqrt(mean_squared_error(target_val, target_pred))
+    r2 = r2_score(target_val, target_pred)
+    
+    # Save validation results
+    validation_results = pd.DataFrame({
+        'Actual': target_val,
+        'Predicted': target_pred,
+        'Error': target_val - target_pred
+    })
+    
+    # Get feature coefficients
+    feature_coefficients = dict(zip(features.columns, model.coef_))
+    
+    model_params = {
+        'param_fit_intercept': model.fit_intercept,
+        'param_copy_X': model.copy_X,
+        'param_positive': model.positive,
+        'param_n_features_in': model.n_features_in_
+    }
+    
+    return {
+        'region_name': region_name,
+        'model': model,
+        'rmse': rmse,
+        'r2': r2,
+        'avg_predicted': np.mean(target_pred),
+        'avg_actual': np.mean(target_val),
+        'validation_results': validation_results,
+        'feature_coefficients': feature_coefficients,
+        'intercept': model.intercept_,
+        'parameters': model_params
+    }
+```
+
+## Base Model Results
+
+|   | Region | RMSE | R2 Score | Avg Predicted Volume | Avg Actual Volume | f0 | f1 | f2 | Intercept | param_fit_intercept | param_copy_X | param_positive | param_n_features_in |
+|---|--------|------|----------|----------------------|-------------------|----|----|----|-----------|---------------------|--------------|----------------|---------------------|
+| 0 |   1    | 37.85 | 0.27 | 92.78 |  92.15 | 3.78 | -13.89 | 6.63 | 77.63 | True | True | False | 3 |
+| 1 |   2    | 0.89  | 0.99 | 69.17 | 69.18 | -0.14 | -0.022 | 26.95 | 1.65 | True | True | False | 3 |
+| 2 |   3    | 40.07 | 0.19 | 94.86 |  	94.78 | 0.052 | -0.061 |  	5.77 | 80.61 | True |  	True | False | 3 |
