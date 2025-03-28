@@ -22,15 +22,15 @@ menu-settings:
 #-------------------------------
 # Author Settings
 author:
-  name: Robert Wilson
-  avatar: '/images/15.jpg'
+  name: Umberto Fasci
+  avatar: '/images/ujfasci.jpg'
 
 
 #-------------------------------
 # Hero Settings
 hero:
-  title: Robert Wilson
-  description: Thoughts, stories and ideas.
+  title: Umberto Fasci
+  description: Data Scientist, Marketing Specialist, Playing my role in today's world of digital alchemy.
   image: '/images/01.jpg'
 
 
