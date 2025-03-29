@@ -129,3 +129,9 @@ def train_and_evaluate_region(data, region_name):
 |   1    | 37.85 | 0.27 | 92.78 |  92.15 | 3.78 | -13.89 | 6.63 | 77.63 |
 |   2    | 0.89  | 0.99 | 69.17 | 69.18 | -0.14 | -0.022 | 26.95 | 1.65 |
 |   3    | 40.07 | 0.19 | 94.86 |  	94.78 | 0.052 | -0.061 |  	5.77 | 80.61 |
+
+Region 2 shows excellent performance: - Very high R² (0.999) indicating the model explains nearly all variance in the data - Very low RMSE (0.89) showing high prediction accuracy - The scatter plot shows points tightly clustered along the perfect prediction line - Error distribution is narrow and normally distributed with small standard deviation - Predicted vs actual volumes are nearly identical (69.18 vs 69.19) - The highly quantized data exhibited by both the f2 feature and the target potentially hold strong influence on the results of this model.
+
+Regions 1 and 3 show poor performance: - Low R² values (0.27 and 0.20 respectively) indicating the model explains very little of the variance - High RMSE values (37.85 and 40.08) showing large prediction errors - Scatter plots show wide dispersion from the perfect prediction line - Error distributions are much wider with larger standard deviations - While average predicted volumes are close to actuals, individual predictions vary greatly
+
+Reviewing the assumptions made by Linear Regression modeling there is an assumption where the errors are normally distributed this is why I have decided to include these in the model performance analysis.
