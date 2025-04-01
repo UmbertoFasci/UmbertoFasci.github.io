@@ -135,3 +135,67 @@ Region 2 shows excellent performance: - Very high R² (0.999) indicating the mod
 Regions 1 and 3 show poor performance: - Low R² values (0.27 and 0.20 respectively) indicating the model explains very little of the variance - High RMSE values (37.85 and 40.08) showing large prediction errors - Scatter plots show wide dispersion from the perfect prediction line - Error distributions are much wider with larger standard deviations - While average predicted volumes are close to actuals, individual predictions vary greatly
 
 Reviewing the assumptions made by Linear Regression modeling there is an assumption where the errors are normally distributed this is why I have decided to include these in the model performance analysis.
+
+# Model Hypertuning
+
+Utilizing the `GridSearchCV` module along with a defined parameter space we can further optimize the present model. The parameter space is defined below, as a note; `None` means 1 unless in a parallel backend context. For this case, 1 is not included for `n_jobs`.
+
+```python
+param_space = {'copy_X': [True,False], 
+               'fit_intercept': [True,False], 
+               'n_jobs': [5,10,15,None],
+               'positive': [True,False]}
+```
+
+```python
+def train_and_hypertune_region(data, region_name):
+    # Separate features and target
+    features = data[['f0', 'f1', 'f2']]
+    target = data['product']
+    
+    # Split data into training and validation sets (75:25)
+    features_train, features_val, target_train, target_val = train_test_split(features, target, test_size=0.25, random_state=12345)
+    
+    # Initialize and train model
+    model = LinearRegression()
+    
+    # Hypertune with GridSearch
+    grid_search = GridSearchCV(model, param_space, cv=5, scoring='neg_root_mean_squared_error')
+    grid_search.fit(features_train, target_train)
+    
+    best_model = grid_search.best_estimator_
+    
+    # Make predictions on validation set
+    target_pred = best_model.predict(features_val)
+    
+    # Calculate metrics
+    rmse = np.sqrt(mean_squared_error(target_val, target_pred))
+    r2 = r2_score(target_val, target_pred)
+    
+    # Save validation results
+    validation_results = pd.DataFrame({
+        'Actual': target_val,
+        'Predicted': target_pred,
+        'Error': target_val - target_pred
+    })
+    
+    # Get feature coefficients
+    feature_coefficients = dict(zip(features.columns, best_model.coef_))
+    
+    # Get hyperparameters as a flattened dictionary
+    hyperparams = {f'param_{key}': value for key, value in grid_search.best_params_.items()}
+    
+    return {
+        'region_name': region_name,
+        'model': best_model,
+        'rmse': rmse,
+        'r2': r2,
+        'avg_predicted': np.mean(target_pred),
+        'avg_actual': np.mean(target_val),
+        'validation_results': validation_results,
+        'feature_coefficients': feature_coefficients,
+        'intercept': best_model.intercept_,
+        'hyperparameters': hyperparams
+    }
+```
+
