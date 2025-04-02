@@ -37,35 +37,7 @@ sent to a two-stage purification.
 
 Below are the staging and processing components associated with the technological process, these compnents are utilized as features in the final dataset.
 
-```mermaid
-graph LR
-    subgraph Process Components
-        direction TB
-        RF[Rougher feed]
-        
-        subgraph Reagents[Rougher/Reagent additions]
-            direction LR
-            X[Xanthate<br/>Promoter/activator]
-            S[Sulphate<br/>Sodium sulphide]
-            D[Depressant<br/>Sodium silicate]
-        end
-        
-        RP[Rougher process<br/>Flotation]
-        RT[Rougher tails<br/>Product residues]
-        FB[Float banks<br/>Flotation unit]
-        CP[Cleaner process<br/>Purification]
-        RAu[Rougher Au<br/>Rougher gold concentrate]
-        FAu[Final Au<br/>Final gold concentrate]
-    end
-    
-    subgraph Stage Parameters
-        direction TB
-        AA[Volume of air]
-        FL[Fluid levels]
-        FS[Feed particle size]
-        FR[Feed rate]
-    end
-```
+**[Update Flow Chart]**
 ## Data Description
 
 Given the technological process which the features originate from they are named in the following format:
@@ -75,7 +47,8 @@ Given the technological process which the features originate from they are named
 ```
 With this in mind we can take another look at the technological process where we can then infer the feature
 names present in the dataset.
-<div align="center">
+
+
 **Update data description chart**
 
     
@@ -89,7 +62,6 @@ names present in the dataset.
 | 6 | secondary_cleaner.output.tail_au |
 | 7 | final.tail_au |
 
-</div>
 
 ## Recovery Calculation Function
 
@@ -317,7 +289,7 @@ distribution comparisons between provided training and testing datasets. and con
 
 ### Metal Concentration
 
-**<UPDATE METAL CONCENTRATION CHART>**
+**UPDATE METAL CONCENTRATION CHART**
 
 The concentration changes of gold (AU), silver (AG), and lead (PB) are illustrated here throughout different stages of the earlier described technological process.
 Gold demonstrates the most significant enrichment, starting at 7.1 in the raw feed, increasing by 142.7% to 17.4 in the rougher concentrate, and finally
@@ -352,7 +324,7 @@ concentrated peak for primary cleaner input near size 0 (indicating finely groun
 size 50 (suggesting more varied particle sizes). This visual consistency in distribution patterns between training and test sets suggests overall stability in the
 grinding and classification processes.
 
-**<UPDATE PARTICLE SICE CHART>**
+**UPDATE PARTICLE SICE CHART**
 
 While the size distribution between the sets may look the same visually, we can statistically ascertain just how similar these distributions are between each other.
 For the purposes of this use-case the **Kolmogorov-Smirnov Test** or **KS Test** is applied. The KS test is a non-parametric and distribution-free test, meaning
