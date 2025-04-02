@@ -27,6 +27,9 @@
   {% capture include_to_scssify %}
     {% include main.scss %}
   {% endcapture %}
+  {% if page.mathjax %}
+    {% include mathjax.html %}
+  {% endif %}
   {{ include_to_scssify | scssify }}
   </style>
 </head>

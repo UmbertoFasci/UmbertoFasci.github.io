@@ -82,9 +82,9 @@ $$
 Where,
 
 
-- \(C\) — share of gold in the concentrate right after flotation (for finding the rougher concentrate recovery)/after purification (for finding the final concentrate recovery)
-- \(F\) — share of gold in the feed before flotation (for finding the rougher concentrate recovery)/in the concentrate right after flotation (for finding the final concentrate recovery)
-- \(T\) — share of gold in the rougher tails right after flotation (for finding the rougher concentrate recovery)/after purification (for finding the final concentrate recovery)
+- $C$ — share of gold in the concentrate right after flotation (for finding the rougher concentrate recovery)/after purification (for finding the final concentrate recovery)
+- $F$ — share of gold in the feed before flotation (for finding the rougher concentrate recovery)/in the concentrate right after flotation (for finding the final concentrate recovery)
+- $T$ — share of gold in the rougher tails right after flotation (for finding the rougher concentrate recovery)/after purification (for finding the final concentrate recovery)
 
 Calculating the recovery in python can be achieved with:
 ```python
@@ -221,9 +221,9 @@ $$
 
 where,
 
-- \(w\) — window size
-- \(t\) — current time point
-- \(X_{i}\) — value at time i
+- $w$ — window size
+- $t$ — current time point
+- $X_{i}$ — value at time i
 
 This is performed in python:
 
