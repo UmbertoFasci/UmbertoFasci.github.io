@@ -75,9 +75,9 @@ and ingesting the data which came in three separate files: `gold_recovery_train.
 Now, continuing with the task at hand. The first objective with this dataset was to make sure that the recovery was calculated appropriately.
 To do this, the following equation was used:
 
-```math
+$$
 Recovery = \frac{C \times (F - T)}{F \times (C - T)} \cdot 100\%
-```
+$$
 
 Where,
 
@@ -215,9 +215,10 @@ an option, at this point I wanted to try and maintain the temporal effects of th
 This interpolation formula creates a bidirectional moving average by computing both forward and backward rolling means with a specified window size, then averages these two
 directions to produce more balanced estimates.
 
-```math
+$$
 Combined \ \ Average(t) = \frac{1}{2} (\frac{\sum_{i=t}^{t+w} X_{i}}{w} + \frac{\sum_{i=t-w}^{t} X_{i}}{w})
-```
+$$
+
 where,
 
 - $w$ — window size
@@ -393,9 +394,10 @@ The Symmetric Mean Absolute Percentage Error (sMAPE) is implemented here as a ro
 special handling for edge cases, particularly when dealing with zero values which are common in industrial process data. The function calculates the percentage error by taking the
 absolute difference between predicted and actual values (numerator) and dividing it by the average of their absolute values (denominator), then multiplying by 100 to express it as a percentage.
 
-```math
+$$
 sMAPE = \frac{1}{N} \sum_{i=1}^{N} \frac{| y_{i} - \hat{y}_{i}|}{(|y_{i}| + |\hat{y}_{i}|)/2} \times 100\%
-```
+$$
+
 The symmetrical nature of sMAPE makes it particularly suitable for our gold recovery predictions because it treats over-predictions and under-predictions equally, which is crucial when optimizing recovery processes where both types of errors can be costly. The function includes safeguards against division by zero and handles invalid cases gracefully, returning 0 when no valid calculations can be made. This is especially important in industrial applications where we need reliable error measurements to make operational decisions about the recovery process.
 
 This sMAPE implimentation can be done using a simple python function:
@@ -429,9 +431,9 @@ The function calculates the individual sMAPE values for each stage and then appl
 final stage contribues 75% to the overall score. This weighting reflects the greater importance of accuracy in the final recovery stage, which directly
 impacts the end product quality.
 
-```math
+$$
 Final \ \ sMAPE = 25\% \times sMAPE(rougher) + 75\% \times sMAPE(final)
-```
+$$
 
 This is formulated in a python function which also provides diagnostic information, displaying the range of the true and predicted values for both stages
 along with their individual sMAPE scores, which helps in understanding where prediction errors are occurring and their relative magnitudes. This
