@@ -330,7 +330,7 @@ For the purposes of this use-case the **Kolmogorov-Smirnov Test** or **KS Test**
 it makes no assumption about the distribution of data. By utilizing this test, we can compare these dsitributions appropriately and determine if they are significantly
 different.
 
-<div align="center">
+
 
 **Kolmogorov-Smirnov Test**
 
@@ -338,7 +338,7 @@ different.
 |--------|------------|------------|
 | primary_cleaner.input.feed_size | `0.0520` | `1.202248e-10` |
 | rougher.input.feed_size | `0.1935` | `5.994895e-143` |
-</div>
+
 
 The KS test results indicate statistically significant differences between the training and test distributions, with p-values well below the **0.05** threshold for both measurements.
 The primary cleaner input shows better alignment between sets with a lower KS statistic of **0.0520**, compared to the rougher input's higher statistic. WHile these differences are
