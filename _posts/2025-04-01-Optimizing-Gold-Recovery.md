@@ -69,8 +69,8 @@ In the procedure, the recovery calculation of the provided dataset is tested aga
 and ingesting the data which came in three separate files: `gold_recovery_train.csv`, `gold_recovery_test.csv`, and `gold_recovery_full.csv`.
 
 
-> The downloaded data is straight from the source, and some parameters are not available becasue they were measured or calculated
-> after the data was collected. That's why some features that are present in the training set may be absent from the test set. 
+_The downloaded data is straight from the source, and some parameters are not available becasue they were measured or calculated_
+_after the data was collected. That's why some features that are present in the training set may be absent from the test set._
 
 Now, continuing with the task at hand. The first objective with this dataset was to make sure that the recovery was calculated appropriately.
 To do this, the following equation was used:
@@ -130,8 +130,8 @@ mae = mean_absolute_error(
 )
 ```
 
-> The `valid_recovery_mask` is created as a way to only include values that are not missing and to avoid any errors.
-> Keep in mind this is being done before any initial data processing. 
+_The `valid_recovery_mask` is created as a way to only include values that are not missing and to avoid any errors._
+_Keep in mind this is being done before any initial data processing._
 
 ### Recovery Calculation Results
 
@@ -249,7 +249,7 @@ To compare the performance of the bi-directional rolling average interpolation p
 
 Having a look at one feature distribution comparing the different fill methods exposes the forward and backward fill process as a zero generator.
 
->This implies that a considerable amount of present zero values are followed by a missing value.
+_This implies that a considerable amount of present zero values are followed by a missing value._
 
 Importantly, the rolling average procedure better maintained the distribution of the data.
 This can also be seen when having a look at another feature distribution comparing the same methods:
@@ -280,7 +280,7 @@ Given the overall performance of the missing value handling methods, and the des
 the bi-directional rolling average + forward fill (remaining missing) methods in order to not only maintain the temporal effects but to maintain the general density distribution
 of the present features.
 
->_The inclusion or exclusion of the backward fill method did not affect the model performance in any way._
+_The inclusion or exclusion of the backward fill method did not affect the model performance in any way._
 
 ## Analysis
 
@@ -304,8 +304,8 @@ concentrate, showing a 32.5% increase in the final stage.
 These patterns reveal that the purification process is most effective for gold concentration while having varying effects on silver and lead, with silver notably being
 reduced in the final stage.
 
-> The primary takeaway from this metal concentration analysis is that the technological purification procedure is most likely targeting gold concentration enrichment.
-> When knowing the source of the data, this is absolutely the case. In this way, this can be a supportive analysis to the present refining procedures.
+_The primary takeaway from this metal concentration analysis is that the technological purification procedure is most likely targeting gold concentration enrichment._
+_When knowing the source of the data, this is absolutely the case. In this way, this can be a supportive analysis to the present refining procedures._
 
 
 
@@ -354,7 +354,7 @@ The following is a collection of all the helper functions used for preparing the
 For this section three main tasks must be performed: feature selection, alignment, and standardization. First, relevant features related to feed characteristics were selected.
 These features include: particle size, concentration, state, and floatbank parameters while excluding target variables (recovery rates).
 
-> When a test dataset is provided, it ensures feature consistency by keeping only columns present in both training and test sets. This is where feature "alignment" takes place.
+_When a test dataset is provided, it ensures feature consistency by keeping only columns present in both training and test sets. This is where feature "alignment" takes place._
 
 The third portion of the feature preparation procedure standardizes the numerical features using `StandardScalar()` to normalize the data scale. To impliment this
 in python, a single function can be created:
