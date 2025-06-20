@@ -24,7 +24,6 @@ In order to develop a proper workflow for optimization we must first understand 
 Mined ore undergoes primary processing to get the ore mixture or rougher feed, which is the raw material for ploatation (also known as the rougher process). After flotation, the material is
 sent to a two-stage purification.
 
-**Update Procedure graph**
 
 ### Flotation
 - Gold ore mixture is fed into the float banks to obtain rougher Au concentrate and roughter `tails` (product residues with low concentration of valuable metals).
@@ -37,7 +36,6 @@ sent to a two-stage purification.
 
 Below are the staging and processing components associated with the technological process, these compnents are utilized as features in the final dataset.
 
-**[Update Flow Chart]**
 ## Data Description
 
 Given the technological process which the features originate from they are named in the following format:
@@ -47,9 +45,6 @@ Given the technological process which the features originate from they are named
 ```
 With this in mind we can take another look at the technological process where we can then infer the feature
 names present in the dataset.
-
-
-**Update data description chart**
 
     
 | # | Feature Name |
@@ -245,8 +240,6 @@ def rolling_average_interpolate(series, window):
 
 To compare the performance of the bi-directional rolling average interpolation procedure, performing a simple forward &rarr; backward fill procedure acts as the compartive method.
 
-**Update Fill Comparison Visual**
-
 Having a look at one feature distribution comparing the different fill methods exposes the forward and backward fill process as a zero generator.
 
 _This implies that a considerable amount of present zero values are followed by a missing value._
@@ -254,7 +247,6 @@ _This implies that a considerable amount of present zero values are followed by 
 Importantly, the rolling average procedure better maintained the distribution of the data.
 This can also be seen when having a look at another feature distribution comparing the same methods:
 
-**Update Fill Comparison Visual**
 
 #### Fill Comparison - Model Performance
 
@@ -288,8 +280,6 @@ The analysis of the given dataset will focus on three factors: metal concentrati
 distribution comparisons between provided training and testing datasets. and concentration distributions by stage.
 
 ### Metal Concentration
-
-**UPDATE METAL CONCENTRATION CHART**
 
 The concentration changes of gold (AU), silver (AG), and lead (PB) are illustrated here throughout different stages of the earlier described technological process.
 Gold demonstrates the most significant enrichment, starting at 7.1 in the raw feed, increasing by 142.7% to 17.4 in the rougher concentrate, and finally
@@ -662,8 +652,6 @@ For the rougher recovery stage, Linear Regression showed consistent but modest p
 
 
 ## Final sMAPE
-
-**UPDATE FINAL SMAPE TABLE**
 
 The Linear Regression model showed the highest combined sMAPE of 10.89%, with prediction ranges exceeding the true value bounds, indicating potential overestimation issues. The Basic Random Forest improved significantly with a combined sMAPE of 8.23%, while the Tuned Random Forest achieved the best performance with a combined sMAPE of 8.05%. The prediction ranges for both Random Forest models stayed closer to the actual value range of 0-100%, suggesting better calibrated predictions. The tuned model’s marginally better performance and more conservative prediction ranges make it the most suitable choice for the gold recovery prediction task, balancing accuracy with prediction reliability.
 
