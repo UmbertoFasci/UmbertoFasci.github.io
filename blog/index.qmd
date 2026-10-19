@@ -1,0 +1,16 @@
+---
+title: Blog
+description: Writing on data science, forecasting and civic data. Also cross-posted to Medium and LinkedIn.
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  sort-ui: false
+  filter-ui: true
+  categories: true
+  feed: true
+  fields: [date, title, subtitle, description, categories, reading-time]
+page-layout: full
+---
+
+![](../images/hero-intervals.png){.page-banner fig-alt="" aria-hidden="true"}

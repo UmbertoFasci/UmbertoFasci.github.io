@@ -1,0 +1,69 @@
+project:
+  type: website
+  output-dir: _site
+  execute-dir: project          # code runs from the repo root, so `import brand_charts` works in any post
+  resources:
+    - CNAME
+    - logo/
+    - images/
+
+lang: en
+
+website:
+  title: "Umberto Fasci"
+  description: "Data science and analytics, civic work, open source research."
+  site-url: https://umbertofasci.net
+  favicon: logo/favicon.svg
+  open-graph:
+    image: logo/social-card-1200x630.png
+  twitter-card: true
+  search:
+    location: sidebar
+    type: overlay
+
+  # Same pattern as kapitan.net: logo and navigation in a docked left sidebar
+  # (on phones it folds into a menu button at the top)
+  sidebar:
+    style: docked
+    logo: logo/umberto-fasci-lockup.svg
+    logo-alt: "Umberto Fasci"
+    title: false
+    collapse-level: 1
+    tools:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/umbertofasci/
+        text: "LinkedIn"
+      - icon: github
+        href: https://github.com/umbertofasci
+        text: "GitHub"
+      - icon: rss
+        href: blog/index.xml
+        text: "RSS feed"
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "About"
+        href: index.qmd#about-me
+
+  page-footer:
+    left: |
+      &copy; 2026 Umberto Fasci
+    right: |
+      Built with [Quarto](https://quarto.org)
+
+format:
+  html:
+    theme: [brand, custom.scss]
+    date-format: "MMM D, YYYY"
+    toc: false
+    include-in-header:
+      text: |
+        <link rel="icon" href="/logo/favicon.ico" sizes="any">
+        <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
+
+execute:
+  freeze: auto                  # code runs once on your machine; CI reuses the saved results in _freeze/

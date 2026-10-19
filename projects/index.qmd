@@ -1,0 +1,17 @@
+---
+title: Projects
+description: Main projects, each with the problem, the approach and what came of it.
+listing:
+  contents: "*/index.qmd"
+  type: grid
+  grid-columns: 3
+  sort: "date desc"
+  sort-ui: false
+  filter-ui: false
+  categories: true
+  image-height: 180px
+  fields: [image, title, description, categories]
+page-layout: full
+---
+
+![](../images/hero-field.png){.page-banner fig-alt="" aria-hidden="true"}

@@ -1,0 +1,9 @@
+/.quarto/
+/_site/
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+# keep _freeze/ committed so GitHub Actions can reuse your rendered code output
+
+**/*.quarto_ipynb

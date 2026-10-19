@@ -1,0 +1,225 @@
+/*-- scss:defaults --*/
+// Layout chrome, modeled on kapitan.net: paper navbar + docked sidebar, ink footer
+$navbar-bg: #FCFCFB;
+$navbar-fg: #121417;
+$navbar-hl: #2F5BD3;
+$sidebar-bg: #FCFCFB;
+$sidebar-fg: #121417;
+$sidebar-hl: #2F5BD3;
+$footer-bg: #121417;
+$footer-fg: #DFE2E8;
+$navbar-padding-y: 1.25rem;
+
+/*-- scss:rules --*/
+
+// Mozilla Headline is designed for 24 px and up.
+// Keep it on H1/H2 and the site title; switch smaller headings to Mozilla Text.
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+  font-family: "Mozilla Text", sans-serif;
+  font-weight: 600;
+}
+
+h1, .h1 { font-size: 2.75rem; line-height: 1.18; letter-spacing: -0.015em; }
+h2, .h2 { font-size: 1.875rem; line-height: 1.27; }
+h3, .h3 { font-size: 1.375rem; line-height: 1.36; }
+
+// Comfortable reading measure for long posts
+main.content p,
+main.content li { max-width: 70ch; }
+// ...except paragraphs that only hold a banner image
+main.content p:has(> .page-banner) { max-width: none; }
+
+a { text-underline-offset: 3px; }
+a:hover { color: #1E43A8; }
+
+// Embedded Streamlit apps ({{< streamlit ... >}} shortcode)
+.app-embed {
+  margin: 2rem 0;
+
+  iframe {
+    display: block;
+    width: 100%;
+    border: 1px solid #DFE2E8;
+    border-radius: 12px;
+    background: #FCFCFB;
+  }
+
+  figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.875rem;
+    color: #4A5263;
+  }
+
+  .app-embed-open {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.875rem;
+  }
+}
+
+// Let wide apps use the body + margin columns on large screens
+@media (min-width: 1200px) {
+  .app-embed { margin-right: -8rem; }
+}
+
+
+// ---- Navigation -------------------------------------------------------------
+.navbar-brand img { max-height: 44px; }
+
+.sidebar-navigation .sidebar-item { font-size: 1.15rem; }
+.sidebar.sidebar-navigation:not(.rollup) { border-right: 0 !important; }
+.sidebar-item-container .active,
+.sidebar-item-container .sidebar-link.active {
+  color: #2F5BD3 !important;
+  font-weight: 600;
+}
+.sidebar-item-container:hover { color: #2F5BD3 !important; }
+
+.nav-footer { font-size: 0.9rem; }
+.nav-footer a { color: #FCFCFB; }
+
+// ---- Landing page (structure follows kapitan.net) -------------------------------
+// Swap images/hero-cover.png for a photo if you like; keep the left side dark for the headline.
+.landing-hero {
+  background: #121417 url("images/hero-cover.png") center / cover no-repeat;
+  border-radius: 16px;
+  min-height: 380px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 0.25rem;
+
+  .landing-hero-title {
+    color: #FCFCFB;
+    font-family: "Mozilla Headline", sans-serif;
+    font-weight: 700;
+    font-size: 3.4rem;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    margin: 0;
+    border: 0;
+  }
+}
+
+.landing-tagline {
+  text-align: center;
+  font-family: "Mozilla Headline", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: #4A5263;
+  margin: 1.5rem auto 3rem;
+  max-width: none !important;
+}
+
+.landing-intro { margin-bottom: 3rem; }
+.landing-intro h4 { margin-top: 1.5rem; }
+
+.focus-row {
+  padding: 2.25rem 2.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 14px;
+
+  h3 { margin-top: 0; }
+  .focus-tags {
+    font-size: 0.9rem;
+    color: #4A5263;
+    margin-top: 1rem;
+  }
+  .focus-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img { max-width: 220px; width: 100%; }
+    p { margin: 0; }
+  }
+}
+.focus-cobalt { background: #2F5BD3; }
+.focus-ink { background: #121417; }
+.focus-cobalt, .focus-ink {
+  color: #FCFCFB;
+  h3 { color: #FCFCFB; }
+  .focus-tags { color: #DFE2E8; }
+  a { color: #FCFCFB; }
+}
+
+.landing-section { margin-top: 3.5rem; }
+
+.portrait-quote {
+  text-align: center;
+  margin: 4.5rem auto 3rem;
+  max-width: 34rem;
+  h3 { font-family: "Mozilla Headline", sans-serif; font-weight: 600; line-height: 1.35; margin-top: 1.25rem; }
+  p { max-width: none !important; }
+}
+
+#about-me { margin-top: 3rem; }
+
+// ---- Page banners and headshot ---------------------------------------------------
+.page-banner {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  object-position: center 85%;
+  border-radius: 12px;
+  border: 1px solid #DFE2E8;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #FCFCFB;
+  box-shadow: 0 0 0 1px #DFE2E8;
+  background: #E6ECFB;
+}
+
+@media (max-width: 767.98px) {
+  .landing-hero { min-height: 260px; padding: 2rem 1.5rem; }
+  .landing-hero .landing-hero-title { font-size: 2.2rem; }
+  .landing-tagline { font-size: 0.8rem; margin-bottom: 2rem; }
+  .focus-row { padding: 1.5rem 1.25rem 1rem; }
+  .focus-row .focus-art img { max-width: 160px; }
+  .page-banner { height: 100px; }
+  .headshot { width: 150px; height: 150px; }
+}
+
+.more-link { display: inline-block; margin-top: 0.5rem; font-weight: 500; text-decoration: none; }
+
+// ---- Listings -------------------------------------------------------------
+.quarto-grid-item.card {
+  border: 1px solid #DFE2E8;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FCFCFB;
+  transition: border-color 0.15s ease;
+}
+.quarto-grid-item.card:hover { border-color: #2F5BD3; }
+.quarto-grid-item .card-title { font-family: "Mozilla Headline", sans-serif; font-weight: 600; }
+
+div.quarto-post .listing-title { font-family: "Mozilla Headline", sans-serif; font-weight: 600; }
+div.quarto-post .listing-subtitle { color: #4A5263; }
+div.quarto-post .listing-description { font-size: 0.95rem; }
+
+.quarto-listing-category .category.active { color: #2F5BD3; font-weight: 600; }
+.listing-categories .listing-category,
+.quarto-category {
+  background: #E6ECFB;
+  color: #1E43A8;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
+
+// ---- Posts and projects ----------------------------------------------------
+.project-links { margin: 0 0 1.5rem; }
+.project-links .btn { margin-right: 0.4rem; }
+
+.crosspost-note { color: #4A5263; font-size: 0.95rem; }
+
+.btn { border-radius: 8px; }
+.btn-primary { background-color: #2F5BD3; border-color: #2F5BD3; }
+.btn-primary:hover { background-color: #1E43A8; border-color: #1E43A8; }

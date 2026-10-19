@@ -1,0 +1,7 @@
+# Defaults for every post in blog/
+title-block-banner: false
+toc: true
+toc-location: right
+code-fold: show
+filters:
+  - ../_filters/crosspost.lua

@@ -1,0 +1,73 @@
+---
+title: " "
+page-layout: article
+
+---
+
+```{=html}
+<div class="landing-hero">
+  <p class="landing-hero-title" role="heading" aria-level="1">[Headline,<br>DATA<br>working for<br>ALL</p>
+</div>
+```
+
+<p class="landing-tagline">DATA SCIENCE &emsp;|&emsp; DATA ANALYTICS &emsp;|&emsp; CIVIC WORK</p>
+
+::: {.grid .landing-intro}
+::: {.g-col-12 .g-col-md-10 .g-start-md-2}
+#### From paper to practice
+
+Between a promising paper and a working tool there’s a lot of unglamorous work: cleaning data, choosing baselines, and finding out what breaks. That’s the part I find most interesting, and the part that rarely gets written down. I find that sharing my work helps me learn faster, and helps others avoid the same mistakes. So I write about what I am learning, and I share the code I use to implement it. My goal is to make data science more accessible, and to help others build better tools for their work.
+
+#### Notes from the workbench
+
+Most of what I publish here are rebuilds and explainers: modern forecasting, causal and machine learning methods, implemented end to end, with honest use cases. Additionally, I write about civic data work and open source research.
+
+:::
+:::
+
+:::: {.focus-row .focus-cobalt}
+::: {.grid}
+::: {.g-col-12 .g-col-md-8}
+### The day job
+
+My day-to-day work as a Senior Data Analyst involves developing a variety of data products, from telecom analytics to time-series forecasting. I also build python and SQL pipelines to automate data collection, cleaning, and analysis. My past work as a Data Scientist involved building predictive models for customer churn, and product recommendation. I have experience with a variety of data science and analytics tools, including Python, SQL, R, and PowerBI/Tableau.
+
+<p class="focus-tags">Time-series forecasting &emsp;|&emsp; Predictive modeling &emsp;|&emsp; Pipeline automation</p>
+:::
+::: {.g-col-12 .g-col-md-4 .focus-art}
+![](images/spot-intervals-inverse.png){fig-alt=""}
+:::
+:::
+::::
+
+:::: {.focus-row .focus-ink}
+::: {.grid}
+::: {.g-col-12 .g-col-md-8}
+### Civic data & mentoring
+
+As Data Lead at Open Austin, I run the Data Research Hub, where volunteer analysts take on questions from local community organizations and residents. I started as a data volunteer myself. Now I manage the projects and mentor the people working on them, and I’m responsible for the quality and direction of the analysis. I also teach: I lead hands-on workshops on working with city open data, and help to organize community-of-practice sessions for data professionals interested in civic tech.
+
+<p class="focus-tags">Open data &emsp;|&emsp; Civic work &emsp;|&emsp; Mentoring &emsp;|&emsp; Project management</p>
+:::
+::: {.g-col-12 .g-col-md-4 .focus-art}
+![](images/spot-contours-inverse.png){fig-alt=""}
+:::
+:::
+::::
+
+### Roles
+
+Senior Level Data Analyst and Scientist, Civic Data Volunteer, Mentor
+
+### Areas of expertise
+
+Analytics, Forecasting, Data Science, Open Source Software, Civic Data, Mentoring
+
+### Focus
+
+Business and civic data
+
+### Contact details
+
+__LinkedIn:__ https://www.linkedin.com/in/umbertofasci/<br>
+__GitHub:__ https://github.com/umbertofasci
