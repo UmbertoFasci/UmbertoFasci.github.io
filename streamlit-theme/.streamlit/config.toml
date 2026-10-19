@@ -1,0 +1,37 @@
+# Umberto Fasci · Ink & Cobalt — Streamlit theme
+# Copy this .streamlit/ folder into the root of each Streamlit app repo.
+# Matches _brand.yml so an embedded app reads as part of the post.
+
+[theme]
+base = "light"
+
+# Type: same families as the Quarto site
+font = "'Mozilla Text':https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@400;500;600&display=swap, sans-serif"
+headingFont = "'Mozilla Headline':https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@600;700&display=swap, sans-serif"
+codeFont = "'Fira Code':https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap, monospace"
+baseFontSize = 16
+
+# Color
+primaryColor = "#2F5BD3"             # cobalt: buttons, sliders, focus
+backgroundColor = "#FCFCFB"          # paper: same as the post background
+secondaryBackgroundColor = "#F3F4F6" # surface: inputs, expanders, code
+textColor = "#121417"                # ink
+linkColor = "#2F5BD3"
+linkUnderline = true
+codeBackgroundColor = "#EEF1F7"
+borderColor = "#DFE2E8"              # rule
+showWidgetBorder = true
+dataframeBorderColor = "#DFE2E8"
+dataframeHeaderBackgroundColor = "#F3F4F6"
+
+# Shape
+baseRadius = "medium"
+buttonRadius = "medium"
+
+# Charts (used by st.line_chart, st.bar_chart, and Plotly/Altair with theme="streamlit")
+chartCategoricalColors = ["#2F5BD3", "#D08A1E", "#12806F", "#B8456A", "#8DB4F5", "#6B7280"]
+chartSequentialColors = ["#EEF2FC", "#D9E2F8", "#BFCEF3", "#9FB4EC", "#7C98E4", "#5A7EDC", "#2F5BD3", "#2549B0", "#1A3687", "#0F1E3D"]
+
+[theme.sidebar]
+backgroundColor = "#F3F4F6"
+secondaryBackgroundColor = "#FCFCFB"

@@ -1,0 +1,32 @@
+---
+title: "[Post title]"
+subtitle: "[Optional one-line subtitle]"
+description: "[One or two sentences for the listing card and link previews.]"
+author: Umberto Fasci
+date: 2026-10-19
+image: cover.png
+categories: [meta]
+# Fill these in after you cross-post; the links appear at the end of the post.
+# crosspost:
+#   medium: https://medium.com/@you/your-post
+#   linkedin: https://www.linkedin.com/pulse/your-post
+---
+
+[Opening paragraph. Long-form text is set in Mozilla Text at 18 px with a ~70-character line, so write in normal paragraphs and let the page do the work.]
+
+## A section heading
+
+[Body text. Inline code like `df.resample("15min")` picks up the tinted code style.]
+
+```python
+# Code blocks use Fira Code. With `freeze: auto`, chunks you run locally
+# are saved in _freeze/ and GitHub Actions reuses the output.
+import brand_charts
+brand_charts.use()
+```
+
+## Embedding an app
+
+<!-- {{< streamlit https://your-app.streamlit.app height="600" title="[App name]" >}} -->
+
+[Remove the comment markers above once you have a deployed Streamlit app.]

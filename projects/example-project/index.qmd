@@ -1,0 +1,34 @@
+---
+title: "[Project title]"
+description: "[One sentence on the problem and the result. Shows on the project card.]"
+date: 2026-10-19
+image: cover.png
+categories: [forecasting, python]
+# links shown as buttons at the top of the page; delete any you don't need
+links:
+  code: "[https://github.com/...]"
+  app: "[https://your-app.streamlit.app]"
+---
+
+::: {.project-links}
+[Code](https://github.com/){.btn .btn-outline-dark .btn-sm} [Live app](https://streamlit.io/){.btn .btn-outline-dark .btn-sm}
+:::
+
+## The problem
+
+[What question were you answering, for whom, and why it mattered.]
+
+## Approach
+
+[Data, methods and the key decisions. A chart or two goes well here.]
+
+## Results
+
+[What changed because of this work. Use real outcomes only.]
+
+## Try it
+
+<!-- Replace the URL with your deployed app, then delete the comment markers -->
+<!-- {{< streamlit https://your-app.streamlit.app height="640" title="[App name]" caption="[One line on what to try]" >}} -->
+
+[Embed a Streamlit app here with the `streamlit` shortcode once it's deployed.]

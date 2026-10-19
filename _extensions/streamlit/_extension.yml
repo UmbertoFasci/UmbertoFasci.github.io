@@ -1,0 +1,7 @@
+title: Streamlit embed
+author: Umberto Fasci
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  shortcodes:
+    - streamlit.lua

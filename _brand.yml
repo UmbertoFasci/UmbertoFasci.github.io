@@ -1,0 +1,68 @@
+# Umberto Fasci · Ink & Cobalt
+
+meta:
+  name: Umberto Fasci
+  link: https://umbertofasci.net
+
+logo:
+  images:
+    mark: logo/uf-mark.svg
+    lockup: logo/umberto-fasci-lockup.svg
+  small: mark
+  medium: lockup
+  large: lockup
+
+color:
+  palette:
+    ink: "#121417"
+    cobalt: "#2F5BD3"
+    cobalt-deep: "#1E43A8"
+    cobalt-tint: "#E6ECFB"
+    muted: "#4A5263"
+    rule: "#DFE2E8"
+    surface: "#F3F4F6"
+    paper: "#FCFCFB"
+    # chart colors (categorical)
+    amber: "#D08A1E"
+    teal: "#12806F"
+    rose: "#B8456A"
+    sky: "#8DB4F5"
+    slate: "#6B7280"
+  foreground: ink
+  background: paper
+  primary: cobalt
+  secondary: muted
+  light: surface
+  dark: ink
+
+typography:
+  fonts:
+    - family: Mozilla Headline
+      source: google
+      weight: [600, 700]
+    - family: Mozilla Text
+      source: google
+      weight: [400, 500, 600]
+    - family: Fira Code
+      source: google
+      weight: [400, 500]
+  base:
+    family: Mozilla Text
+    size: 18px
+    line-height: 1.65
+  headings:
+    # Mozilla Headline is meant for 24 px and up; see custom.scss for H3 and smaller
+    family: Mozilla Headline
+    weight: 600
+    color: ink
+  monospace:
+    family: Fira Code
+    size: 0.9em
+  monospace-inline:
+    color: ink
+    background-color: "#EEF1F7"
+  monospace-block:
+    background-color: surface
+  link:
+    color: cobalt
+    decoration: underline
