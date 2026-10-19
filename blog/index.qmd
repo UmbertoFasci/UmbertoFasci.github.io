@@ -13,4 +13,4 @@ listing:
 page-layout: full
 ---
 
-![](../images/hero-intervals.png){.page-banner fig-alt="" aria-hidden="true"}
+![](../images/hero-field.png){.page-banner fig-alt="" aria-hidden="true"}
