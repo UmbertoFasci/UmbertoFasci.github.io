@@ -40,14 +40,10 @@ website:
         href: blog/index.xml
         text: "RSS feed"
     contents:
-      - text: "Home"
-        href: index.qmd
       - text: "Projects"
         href: projects/index.qmd
       - text: "Blog"
         href: blog/index.qmd
-      - text: "About"
-        href: index.qmd#about-me
 
   page-footer:
     left: |

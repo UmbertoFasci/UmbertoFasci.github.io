@@ -6,7 +6,7 @@ page-layout: article
 
 ```{=html}
 <div class="landing-hero">
-  <p class="landing-hero-title" role="heading" aria-level="1">[Headline,<br>DATA<br>working for<br>ALL</p>
+  <p class="landing-hero-title" role="heading" aria-level="1"><br>data<br>working for<br>all</p>
 </div>
 ```
 
