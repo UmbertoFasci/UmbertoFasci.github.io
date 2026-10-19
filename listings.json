@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2026-10-19-hello-world/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/example-project/index.html"
+    ]
+  }
+]
