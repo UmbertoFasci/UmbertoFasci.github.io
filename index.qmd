@@ -42,15 +42,15 @@ My day-to-day work as a Senior Data Analyst involves developing a variety of dat
 
 :::: {.focus-row .focus-ink}
 ::: {.grid}
+::: {.g-col-12 .g-col-md-4 .focus-art}
+![](images/spot-contours-inverse.png){fig-alt=""}
+:::
 ::: {.g-col-12 .g-col-md-8}
 ### Civic data & mentoring
 
 As Data Lead at Open Austin, I run the Data Research Hub, where volunteer analysts take on questions from local community organizations and residents. I started as a data volunteer myself. Now I manage the projects and mentor the people working on them, and I’m responsible for the quality and direction of the analysis. I also teach: I lead hands-on workshops on working with city open data, and help to organize community-of-practice sessions for data professionals interested in civic tech.
 
 <p class="focus-tags">Open data &emsp;|&emsp; Civic work &emsp;|&emsp; Mentoring &emsp;|&emsp; Project management</p>
-:::
-::: {.g-col-12 .g-col-md-4 .focus-art}
-![](images/spot-contours-inverse.png){fig-alt=""}
 :::
 :::
 ::::
