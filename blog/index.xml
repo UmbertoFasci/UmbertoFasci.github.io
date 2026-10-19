@@ -9,8 +9,8 @@
 <link>https://umbertofasci.net/blog/</link>
 <atom:link href="https://umbertofasci.net/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Writing on data science, forecasting and civic data. Also cross-posted to Medium and LinkedIn.</description>
-<generator>quarto-1.9.38</generator>
-<lastBuildDate>Mon, 19 Oct 2026 05:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.19</generator>
+<lastBuildDate>Mon, 19 Oct 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>[Post title]</title>
   <dc:creator>Umberto Fasci</dc:creator>
@@ -46,7 +46,7 @@ font-style: inherit;">import</span> brand_charts</span>
  ]]></description>
   <category>meta</category>
   <guid>https://umbertofasci.net/blog/2026-10-19-hello-world/</guid>
-  <pubDate>Mon, 19 Oct 2026 05:00:00 GMT</pubDate>
+  <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
   <media:content url="https://umbertofasci.net/blog/2026-10-19-hello-world/cover.png" medium="image" type="image/png" height="76" width="144"/>
 </item>
 </channel>
