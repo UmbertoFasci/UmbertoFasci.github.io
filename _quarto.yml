@@ -42,7 +42,7 @@ website:
     contents:
       - text: "Projects"
         href: projects/index.qmd
-      - text: "Blog"
+      - text: "The Join"
         href: blog/index.qmd
 
   page-footer:
