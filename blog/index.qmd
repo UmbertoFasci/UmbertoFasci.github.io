@@ -1,6 +1,6 @@
 ---
-title: Blog
-description: Writing on data science, forecasting and civic data. Also cross-posted to Medium and LinkedIn.
+title: The Join
+description: Writing on data work, from the perspective of a data professional.
 listing:
   contents: "*/index.qmd"
   type: default
